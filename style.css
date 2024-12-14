@@ -128,11 +128,39 @@ span {
     display: none;
 }
 
+.header .signin-btn {
+    color: #fff;
+    background-color: var(--black);
+    border-radius: 5rem;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    transition: background-color 0.3s ease;
+}
+
+.header .signin-btn:hover {
+    background-color: #fff;
+    color: var(--black);
+}
+
+.header .signup-btn {
+    color: #fff;
+    background-color: var(--black);
+    border-radius: 5rem;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    transition: background-color 0.3s ease;
+}
+
+.header .signup-btn:hover {
+    background-color: #fff;
+    color: var(--black);
+}
+
 /*---------- Home Section  --------- */
 
 .home {
     margin-top: 7rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 15rem;
     width: 100%;
 }
 
@@ -206,7 +234,7 @@ span {
 /*---------- About Section  --------- */
 
 .about {
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-bottom: 7rem;
 }
 
@@ -430,6 +458,7 @@ span {
     color: var(--light);
 }
 
+
 .contact .row form .radio {
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -467,12 +496,98 @@ span {
     color: var(--grn);
 }
 
+/*-------- signin,signup Section ----------*/
+.auth-section {
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: 1rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-section .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.auth-section .tab-link {
+    background-color: var(--black);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    /* border: 1px solid; */
+}
+
+.auth-section .tab-link.active,
+.auth-section .tab-link:hover {
+    background-color: #fff;
+    color: var(--black);
+}
+
+.auth-section .tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-section .tab-pane {
+    display: none;
+}
+
+.auth-section .tab-pane.active {
+    display: block;
+}
+
+.auth-section .form-heading {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.auth-section .input-box {
+    width: 90%;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    background-color: var(--black);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.auth-section .input-box::placeholder {
+    color: var(--light);
+}
+
+.auth-section p {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--light);
+}
+
+.auth-section p a {
+    color: var(--grn);
+    font-weight: bold;
+}
+
+.auth-section .btn {
+    background-color: var(--black);
+    color: #fff;
+}
+
+.auth-section .btn:hover {
+    background-color: #fff;
+    color: var(--black);
+}
+
 /*-------- Footer Section ----------*/
 
 footer {
     background-color: var(--light-bg);
     text-align: center;
-    align-items: center;
 }
 
 footer .share a {
