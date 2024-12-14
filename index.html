@@ -24,15 +24,20 @@
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#courses">Courses</a>
-                <a href="#instructor">instructor</a>
+                <a href="#instructor">Instructor</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#contact">Contact</a>
             </nav>
+
+            <a href="#auth" class="btn signup-btn">sign up</a>
+            <a href="#auth" class="btn signin-btn">sign in</a>
+
 
             <div id="menu-btn" class="fas fa-bars"></div>
         </section>
     </header>
     <!------- ./Header Section ------->
+
 
     <!------- Home Section ------->
     <section class="home" id="home">
@@ -49,43 +54,6 @@
 
     <!------- ./Home Section ------->
 
-    <!------- Counter ------->
-    <section class="count">
-        <div class="box-container">
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <div class="content">
-                    <h3 class="counter" data-end-value="15000">+</h3>
-                    <p>courses</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-user-graduate"></i>
-                <div class="content">
-                    <h3 class="counter" data-end-value="1300">+</h3>
-                    <p>Students</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-chalkboard-user"></i>
-                <div class="content">
-                    <h3 class="counter" data-end-value="80">+</h3>
-                    <p>instructor</p>
-                </div>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-face-smile"></i>
-                <div class="content">
-                    <h3>100%</h3>
-                    <p>beneficial</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!------- ./Counter ------->
 
     <!------- About Section ------->
     <section class="about" id="about">
@@ -100,8 +68,45 @@
                 <a href="#contact" class="btn">contact us</a>
             </div>
         </div>
+
+        <div class="count">
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="content">
+                        <h3 class="counter" data-end-value="15000">+</h3>
+                        <p>courses</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-user-graduate"></i>
+                    <div class="content">
+                        <h3 class="counter" data-end-value="1300">+</h3>
+                        <p>Students</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <div class="content">
+                        <h3 class="counter" data-end-value="80">+</h3>
+                        <p>instructor</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-face-smile"></i>
+                    <div class="content">
+                        <h3>100%</h3>
+                        <p>beneficial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!------- ./About Section ------->
+
 
     <!------- Courses Section ------->
     <section class="courses" id="courses">
@@ -116,7 +121,7 @@
                 </div>
 
                 <div class="swiper-slide slide">
-                    <img src="images/mobile-development.svg" alt="courses">
+                    <img src="images/mobile-developmen.svg" alt="courses">
                     <h3>mobil development</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor urna nec velit iaculis.</p>
                     <a href="#contact" class="btn">learn more</a>
@@ -360,12 +365,12 @@
                 <input type="text" required placeholder="Enter your full name" maxlength="50" name="name" class="box">
                 <span>your email</span>
                 <input type="email" required placeholder="Enter your email" maxlength="50" name="email" class="box">
-                <span>your phone number</span>
-                <input type="tel" name="phone" placeholder="Enter your phone number" required
-                    pattern="\+\d{0,10}\d{0,12}" maxlength="12" class="box">
+                <span>your email</span>
+                <input type="number" required placeholder="Enter your number" max="99999999999" main="0" name="number"
+                    class="box" onkeypress="if(this.value.length == 10); return false;">
                 <span>Select courses</span>
                 <select name="courses" class="box" required>
-                    <option value="" disabled selected>Select the course--</option>
+                    <option value="" disabled selected>select the course--</option>
                     <option value="Web Development">web development--</option>
                     <option value="Mobile development">Mobile development--</option>
                     <option value="Data Science">Data Science--</option>
@@ -384,6 +389,41 @@
         </div>
     </section>
     <!------- ./Contact Section ------->
+
+    <!-- Signin, Signup Section -->
+    <section class="auth-section" id="auth">
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'signin')">sign in</button>
+            <button class="tab-link" onclick="openTab(event, 'signup')">sign up</button>
+        </div>
+        <div class="tab-content">
+            <!-- Signin Form -->
+            <div id="signin" class="tab-pane active">
+                <form action="signin.php" method="post">
+                    <h2 class="form-heading">sign in</h2>
+                    <input type="email" required placeholder="Enter your email" name="email" class="input-box">
+                    <input type="password" required placeholder="Enter your password" name="password" class="input-box">
+                    <input type="submit" value="sign in" class="btn">
+                    <p>Don't have an account? <a href="#auth" onclick="openTab(event, 'signup')">sign up here</a></p>
+                </form>
+            </div>
+            <!-- Signup Form -->
+            <div id="signup" class="tab-pane">
+                <form action="signup.php" method="post">
+                    <h2 class="form-heading">sign up</h2>
+                    <input type="text" required placeholder="Enter your full name" name="name" class="input-box">
+                    <input type="email" required placeholder="Enter your email" name="email" class="input-box">
+                    <input type="password" required placeholder="Create a password" name="password" class="input-box">
+                    <input type="password" required placeholder="Confirm your password" name="confirm_password"
+                        class="input-box">
+                    <input type="submit" value="sign up" class="btn">
+                    <p>Already have an account? <a href="#auth" onclick="openTab(event, 'signin')">sign in here</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- ./Signin, Signup Section -->
+
 
 
 
