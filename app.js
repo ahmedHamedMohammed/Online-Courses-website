@@ -106,3 +106,15 @@ function startCounters(className, duration) {
 window.onload = function () {
     startCounters("counter", 2000); // Start counters for all elements with the class "counter"
 };
+
+// signin,signup
+function openTab(evt, tabName) {
+    const tabLinks = document.querySelectorAll(".tab-link");
+    const tabPanes = document.querySelectorAll(".tab-pane");
+
+    tabLinks.forEach((link) => link.classList.remove("active"));
+    tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+    evt.currentTarget.classList.add("active");
+    document.getElementById(tabName).classList.add("active");
+}
